@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Loginview"
+    tools:context=".authentication.signUp.view.SignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="280dp"
+                    android:id="@+id/ivlogo"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo"
+                    android:layout_height="50dp">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_below="@id/ivlogo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:textSize="26sp"
+
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/ralewaybold"
+                    android:text="LOGIN"
+                    android:layout_height="wrap_content"/>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+
+
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/icon_email"/>
+
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:background="@null"
+                            android:id="@+id/etEmailAddressLogin"
+                            android:layout_height="30dp"
+                            android:hint="EMAIL"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/ralewaymedium"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColorHint="@color/colorDarkBackground"
+                            android:textColor="@color/colorBlack"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="27dp"
+                    android:background="@color/colorDarkergrey"
+                    android:layout_marginTop="8dp"/>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
+                        android:src="@drawable/icon_lock"/>
+
+                    <LinearLayout
+                        android:padding="5dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:background="@null"
+                            android:id="@+id/etPasswordLogin"
+                            android:layout_height="30dp"
+                            android:hint="PASSWORD"
+                            android:textSize="16sp"
+                            android:singleLine="true"
+                            android:inputType="textPassword"
+                            android:fontFamily="@font/ralewaymedium"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textColorHint="@color/colorDarkBackground"
+                            android:textColor="@color/colorBlack"
+                            />
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginHorizontal="27dp"
+                    android:background="@color/colorDarkergrey"
+                    android:layout_marginTop="8dp"/>
+
+
+
+
+                <TextView
+                    android:id="@+id/tvLoginLogin"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="LOGIN"
+                    android:background="@drawable/blue_round_bg"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvSignUpLogin"
+                    android:layout_width="130sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="50dp"
+                    android:text="SIGN UP"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:background="@drawable/grey_round_bg"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+
+
+                <TextView
+
+                    android:fontFamily="@font/ralewaybold"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/tvForgotPasswordLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forgot_password"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="center"
+                    android:textSize="15sp"/>
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:gravity="center_vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/ivBackPlaceOrder"
+
+                android:layout_width="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ralewaymedium"
+                android:textSize="20sp"/>
+
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/rel_layout_1">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_name"
+            >
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDarkgrey"
+                android:textSize="13sp"
+                android:text="Name On Card"
+                android:fontFamily="@font/ralewaybold"
+                ></TextView>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:text="*"
+
+                ></TextView>
+
+        </LinearLayout>
+
+
+        <EditText
+
+            android:id="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint=" Enter First Name"
+            android:fontFamily="@font/ralewaymedium"
+            android:textColor="@color/colorBlack"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:background="@null"
+            android:textColorHint="@color/colorWhite"
+            android:singleLine="true"
+            android:lines="1"
+
+
+            android:inputType="textPersonName"
+            android:layout_below="@+id/ll_name">
+        </EditText>
+        <View
+            android:layout_below="@+id/ed_name"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#918B8B"></View>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/rel_layout_1"
+        android:id="@+id/rel_layout">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_amount"
+            >
+            <TextView
+                android:id="@+id/tvFname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorDarkgrey"
+                android:textSize="13sp"
+                android:text="Amount"
+                android:fontFamily="@font/ralewaymedium"
+                ></TextView>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:text="*"
+
+                ></TextView>
+
+        </LinearLayout>
+
+
+        <TextView
+
+            android:id="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint=" Enter First Name"
+            android:fontFamily="@font/ralewaymedium"
+            android:textColor="@color/colorBlack"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:background="@null"
+            android:textColorHint="@color/colorWhite"
+            android:singleLine="true"
+            android:lines="1"
+            android:text="jflksjfl"
+
+            android:inputType="textPersonName"
+            android:layout_below="@+id/ll_amount">
+        </TextView>
+        <View
+            android:layout_below="@+id/tv_amount"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#918B8B"></View>
+
+    </RelativeLayout>
+    <com.stripe.android.view.CardMultilineWidget
+
+        android:id="@+id/card_multiline_widget"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        style="@style/Base.CardView"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/rel_layout"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_multiline_widget"/>
+
+
+
+
+
+</RelativeLayout>

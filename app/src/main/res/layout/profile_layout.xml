@@ -1,0 +1,703 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/ProfileView"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+
+       android:background="@drawable/blue_gradient_bg"
+       android:layout_weight=".28">
+
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/back_white"
+           android:layout_marginTop="15dp"
+           android:id="@+id/ivBackProfile"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"/>
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintBottom_toBottomOf="@id/ivBackProfile"
+           app:layout_constraintTop_toTopOf="@id/ivBackProfile"
+           android:text="PROFILE"
+           android:textColor="@color/colorWhite"
+           android:textSize="20sp"
+           android:fontFamily="@font/ralewaymedium"/>
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_width="60dp"
+           app:civ_border_color="@color/colorWhite"
+           app:civ_border_width="2dp"
+           android:src="@drawable/ic_launcher_background"
+           android:id="@+id/ivUserImage"
+           android:layout_height="60dp"
+           android:visibility="gone"
+           app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+           android:layout_marginBottom="30dp"
+           android:layout_marginLeft="30dp"/>
+
+       <TextView
+           android:layout_width="0dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_height="wrap_content"
+           android:text="User Name"
+           android:layout_marginRight="20dp"
+
+           android:textColor="@color/colorWhite"
+           android:id="@+id/tvUserName"
+           android:fontFamily="@font/ralewaymedium"
+           android:textSize="20sp"
+
+app:layout_constraintBottom_toTopOf="@id/tvUserEmail"
+           android:layout_marginLeft="20dp"
+           android:layout_marginBottom="10dp"
+           app:layout_constraintStart_toEndOf="@id/ivUserImage"/>
+
+       <TextView
+           android:layout_width="0dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_marginRight="20dp"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="20dp"
+           android:text="User email"
+           android:layout_marginBottom="30dp"
+           android:fontFamily="@font/ralewaymedium"
+           android:textColor="@color/colorWhite"
+           android:id="@+id/tvUserEmail"
+           android:textSize="17sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toEndOf="@id/ivUserImage"/>
+
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
+        android:background="@drawable/blue_storke_rounded"
+        android:layout_weight=".7">
+
+        <androidx.core.widget.NestedScrollView
+            android:fillViewport="true"
+            android:layout_marginBottom="10dp"
+
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:layout_marginHorizontal="20dp"
+              android:layout_height="match_parent">
+
+              <LinearLayout
+                  android:visibility="gone"
+                  android:id="@+id/llAboutMe"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/user_blue"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="About Me"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          android:drawableRight="@drawable/right_grey" />
+
+
+
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/llMyOrder"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/cart_blue"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="My Order"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:drawableRight="@drawable/right_grey"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/llResetPasword"
+                  android:visibility="gone"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/lock_blue"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:drawableRight="@drawable/right_grey"
+                          android:text="Reset Password"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+              <LinearLayout
+                  android:id="@+id/llManageAddress"
+                  android:layout_marginTop="10dp"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/manage_address"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+                          android:drawableRight="@drawable/right_grey"
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="Manage Address"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/llMyPassword"
+                  android:layout_marginTop="10dp"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/lock_blue"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+                          android:drawableRight="@drawable/right_grey"
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="My Password"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+              <LinearLayout
+                  android:id="@+id/llHelp"
+                  android:layout_marginTop="10dp"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/help"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+                          android:drawableRight="@drawable/right_grey"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="Terms &amp; Conditions"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/llSetting"
+                  android:visibility="gone"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/setting"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+                          android:drawableRight="@drawable/right_grey"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="Setting"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+              <LinearLayout
+                  android:layout_marginTop="10dp"
+                  android:id="@+id/llPrivacyPolicy"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/privacy"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:drawableRight="@drawable/right_grey"
+                          android:layout_width="match_parent"
+                          android:background="@null"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="Privacy Policy"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+              <LinearLayout
+                  android:id="@+id/llFaq"
+                  android:layout_marginTop="10dp"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/faq"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+                          android:drawableRight="@drawable/right_grey"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="FAQ"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+              <LinearLayout
+                  android:id="@+id/llInstructionToUse"
+                  android:layout_marginTop="10dp"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/instruction"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+                          android:drawableRight="@drawable/right_grey"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="Instruction for use"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/llContact"
+                  android:layout_marginTop="10dp"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <ImageView
+                      android:layout_marginTop="5dp"
+                      android:layout_width="30dp"
+                      android:layout_height="30dp"
+                      android:padding="5dp"
+                      android:src="@drawable/contact"/>
+
+                  <LinearLayout
+                      android:padding="5dp"
+                      android:layout_marginBottom="20dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:layout_marginLeft="10dp">
+
+                      <TextView
+                          android:layout_width="match_parent"
+                          android:background="@null"
+                          android:drawableRight="@drawable/right_grey"
+
+                          android:layout_gravity="center"
+                          android:layout_height="30dp"
+                          android:fontFamily="@font/ralewaymedium"
+                          android:textSize="18sp"
+                          android:singleLine="true"
+                          android:text="Contact"
+                          android:gravity="center_vertical"
+
+                          android:inputType="textPersonName"
+                          android:maxLines="1"
+                          android:ellipsize="end"
+                          android:textColorHint="@color/colorDarkBackground"
+                          android:textColor="@color/colorBlack"
+                          />
+
+                      <View
+                          android:layout_width="match_parent"
+                          android:layout_height="2dp"
+                          android:background="@color/colorView"
+                          android:layout_marginTop="12dp"/>
+
+                  </LinearLayout>
+
+
+
+              </LinearLayout>
+
+
+
+
+          </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

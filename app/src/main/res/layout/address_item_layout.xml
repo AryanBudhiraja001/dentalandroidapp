@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="2dp"
+        app:cardUseCompatPadding="true"
+
+        app:cardElevation="2dp"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/black_stroke_rectangle_bg"
+            android:layout_height="wrap_content">
+            <TextView
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vani"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/tvNameAddress"
+                android:textSize="14sp"
+                android:fontFamily="@font/ralewaymedium"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+
+                android:layout_marginBottom="10dp"
+
+                android:layout_width="match_parent"
+                android:gravity="start"
+                android:layout_marginLeft="15sp"
+                app:layout_constraintTop_toBottomOf="@id/tvNameAddress"
+
+                android:layout_below="@id/tvNameAddress"
+                app:layout_constraintEnd_toStartOf="@id/checkbox"
+                android:layout_marginRight="50dp"
+                android:text="snfnskdf jdfksdhfks jhsdfjkhs gdfg "
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:id="@+id/tvAddrress"
+                android:fontFamily="@font/ralewaymedium"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/tvAddrress"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vani"
+                android:paddingBottom="10dp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/tvPhoneNumber"
+                android:textSize="14sp"
+                android:fontFamily="@font/ralewaymedium"
+                android:layout_marginTop="15dp"/>
+
+
+            <ImageView
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="15sp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="15sp"
+                android:src="@drawable/radio_unselecred"
+                >
+
+
+
+            </ImageView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/view"
+                app:layout_constraintTop_toBottomOf="@id/tvPhoneNumber"
+                android:background="@color/colorDarkBackground"
+                android:layout_marginHorizontal="10dp"
+                />
+
+            <LinearLayout
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view"
+
+                android:layout_width="match_parent"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_height="40dp">
+
+                <TextView
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:text="Edit"
+                     android:textColor="@color/colorPrimary"
+                     android:fontFamily="@font/ralewaybold"
+                     android:textSize="16sp"
+                     android:id="@+id/tvEditAddress"
+                     android:gravity="center"/>
+
+                 <View
+                     android:layout_width="1dp"
+                     android:background="@color/colorDarkBackground"
+                     android:layout_height="match_parent"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delete"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorDarkBackground"
+                    android:fontFamily="@font/ralewaybold"
+                    android:textSize="16sp"
+                    android:id="@+id/tvDeleteAddress"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</LinearLayout>

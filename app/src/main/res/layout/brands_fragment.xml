@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/BrandsView"
+    android:background="@color/colorWhite"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/layout_filter"
+        android:id="@+id/layoutFilter"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/layoutFilter"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+                android:id="@+id/rvhome"/>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNoCategory"
+        android:text="No Category found"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textColor="@color/colorDarkgrey"
+        android:textSize="18sp"
+        android:fontFamily="@font/ralewaymediumitalic"
+        android:gravity="center"
+        />
+
+
+</RelativeLayout>

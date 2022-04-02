@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:layout_marginVertical="5dp"
+    android:background="@color/colorWhite"
+    android:layout_marginHorizontal="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:id="@+id/ivProductImageCheckout"
+        android:src="@drawable/placeholder"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivProductImageCheckout"
+        app:layout_constraintStart_toEndOf="@id/ivProductImageCheckout"
+        app:layout_constraintEnd_toStartOf="@+id/llUpdateQuantity"
+        android:layout_marginHorizontal="5dp"
+        android:maxLines="5"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaymedium"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@id/ivProductImageCheckout"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName"
+        app:layout_constraintEnd_toStartOf="@+id/llUpdateQuantity"
+        android:layout_marginHorizontal="5dp"
+        android:maxLines="4"
+        android:text="7/60"
+        android:textColor="@color/colorYellow"
+        android:fontFamily="@font/ralewaymedium"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:id="@+id/tvProductQuant"
+        android:layout_width="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toEndOf="@id/ivProductImageCheckout"
+        app:layout_constraintTop_toBottomOf="@id/tvProductPrice"
+        app:layout_constraintEnd_toStartOf="@+id/llUpdateQuantity"
+        android:layout_marginHorizontal="5dp"
+        android:maxLines="4"
+        android:text="7/60"
+        android:textColor="@color/colorYellow"
+        android:fontFamily="@font/ralewaymedium"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        />
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_marginHorizontal="10dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/llUpdateQuantity"
+        android:layout_marginVertical="5dp"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/minus"
+            android:id="@+id/ivMinusUpdate"
+            />
+
+        <TextView
+            android:id="@+id/tvProductQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/colorYellow"
+            android:fontFamily="@font/ralewaymedium"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/plus"
+            android:id="@+id/ivPlusUpdate"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

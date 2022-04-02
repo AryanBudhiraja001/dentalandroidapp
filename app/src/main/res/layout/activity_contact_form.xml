@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.ContactFormActivity">
+
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:id="@+id/lltoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivBackHome"
+                android:layout_width="wrap_content"
+                android:src="@drawable/back"
+
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/search"/>
+            <ImageView
+                android:id="@+id/ivCart"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/basket"/>
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/menu"/>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        android:id="@+id/glStart" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp"
+        android:id="@+id/glEnd" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+      app:layout_constraintTop_toBottomOf="@+id/lltoolbar"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:gravity="center"
+        android:layout_marginTop="15sp"
+        android:text="@string/if_you_got_any_questions_please_do_not_hestitate_to_send_us_a_message"
+        android:layout_height="wrap_content"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@id/txt"
+        android:layout_width="0dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="@id/glStart"
+        app:layout_constraintEnd_toEndOf="@id/glEnd"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="@id/glStart"
+            app:layout_constraintEnd_toEndOf="@id/glEnd"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/CountryList"
+                android:background="@drawable/light_grey_bg"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:id="@+id/etCompany"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15sp"
+                android:hint="@string/company"
+                android:lines="1"
+                android:paddingStart="10dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/ralewaymedium"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/light_grey_bg"
+                android:layout_height="50dp" />
+
+            <RadioButton
+                android:id="@+id/rvDentalLab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorDarkergrey"
+                android:text="Dental Lab"/>
+            <RadioButton
+                android:id="@+id/rvSurgery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorDarkergrey"
+                android:text="Surgery"/>
+            <RadioButton
+                android:id="@+id/rvSupplier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorDarkergrey"
+                android:text="Supplier/ Manufacturer"/>
+            <RadioButton
+                android:id="@+id/rvOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorDarkergrey"
+                android:text="Other"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15sp"
+                android:hint="Your name"
+                android:textSize="14sp"
+                android:paddingStart="10dp"
+
+
+                android:lines="1"
+                android:fontFamily="@font/ralewaymedium"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/light_grey_bg"
+                android:layout_height="50dp" />
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15sp"
+                android:hint="Your email"
+                android:textSize="14sp"
+                android:lines="1"
+                android:fontFamily="@font/ralewaymedium"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/light_grey_bg"
+                android:layout_height="50dp" />
+            <EditText
+                android:id="@+id/etSubject"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15sp"
+                android:hint="Subject"
+                android:paddingStart="10dp"
+
+
+                android:textSize="14sp"
+                android:lines="1"
+                android:fontFamily="@font/ralewaymedium"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/light_grey_bg"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:id="@+id/etTelephone"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15sp"
+                android:hint="Telephone"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:paddingStart="10dp"
+
+                android:lines="1"
+                android:fontFamily="@font/ralewaymedium"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/light_grey_bg"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15sp"
+                android:hint="Message"
+                android:paddingStart="10dp"
+
+
+
+                android:gravity="start|top"
+                android:paddingVertical="10dp"
+
+                android:textSize="14sp"
+                android:fontFamily="@font/ralewaymedium"
+                android:paddingHorizontal="5dp"
+                android:background="@drawable/light_grey_bg"
+                android:layout_height="100dp" />
+
+
+           <TextView
+               android:id="@+id/tvSendMessage"
+               android:text="Send Message"
+               android:textColor="@color/colorWhite"
+               android:textSize="15sp"
+               android:layout_marginTop="10dp"
+               android:layout_gravity="center_horizontal"
+               android:background="@color/colorBlack"
+               android:paddingVertical="15dp"
+               android:paddingHorizontal="20dp"
+               android:layout_marginBottom="50dp"
+               android:textAllCaps="true"
+               android:gravity="center_horizontal"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content">
+
+           </TextView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

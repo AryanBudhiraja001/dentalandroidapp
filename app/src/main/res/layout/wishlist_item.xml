@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="10dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_marginVertical="5dp"
+    android:layout_marginHorizontal="5dp"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:id="@+id/ivFavW"
+
+            android:layout_alignParentRight="true"
+            android:src="@drawable/heart_fill"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:id="@+id/ivProductImageW"
+        android:src="@drawable/placeholder"
+        />
+
+    <TextView
+        android:id="@+id/tvProductNameW"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/ivProductImage"
+        app:layout_constraintStart_toEndOf="@id/ivProductImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="15dp"
+        android:maxLines="3"
+        android:text="wefhkefhlwhefkl.wefhlw"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaymedium"
+        android:textSize="13sp"
+        android:ellipsize="end"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/tvProductPriceW"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toEndOf="@id/ivProductImage"
+        app:layout_constraintTop_toBottomOf="@id/tvProductName"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="15dp"
+        android:maxLines="4"
+        android:text="7/60"
+        android:textColor="@color/colorYellow"
+        android:fontFamily="@font/ralewaymedium"
+        android:textSize="18sp"
+        android:ellipsize="end"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_height="40dp"
+        android:text="ADD TO CART"
+        android:gravity="center"
+        android:id="@+id/tvAddToCartW"
+
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaymedium"
+        android:background="@drawable/black_stroke_rectangle_bg"/>
+
+
+
+
+
+
+</LinearLayout>

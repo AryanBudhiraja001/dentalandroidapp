@@ -1,0 +1,340 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/FilterView"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+        android:orientation="vertical"
+
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <include layout="@layout/layout_filter"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/search"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="Search"
+            android:id="@+id/edSearchCategory"
+            android:fontFamily="@font/ralewaymedium"
+            android:inputType="text"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:textColor="@color/colorDarkgrey"
+            android:textSize="16sp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvCategory"
+                android:scrollbars="none"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size"/>
+
+
+          <!--  <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvSized"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbAllSize"
+                    android:text="All"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textColor="@color/colorDarkergrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:buttonTint="@color/colorDarkgrey"/>
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbNP"
+                    android:text="NP"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textColor="@color/colorDarkergrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:buttonTint="@color/colorDarkgrey"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbRP"
+                    android:text="RP"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textColor="@color/colorDarkergrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:buttonTint="@color/colorDarkgrey"/>
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbWP"
+                    android:text="WP"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textColor="@color/colorDarkergrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:buttonTint="@color/colorDarkgrey"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volume"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbAllVolume"
+                    android:text="All"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textColor="@color/colorDarkergrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:buttonTint="@color/colorDarkgrey"/>
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbPack"
+                    android:text="Pack"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textColor="@color/colorDarkergrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:buttonTint="@color/colorDarkgrey"/>
+
+            </LinearLayout>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbSingle"
+                android:text="Single"
+                android:textSize="16sp"
+                android:fontFamily="@font/ralewaymedium"
+                android:textColor="@color/colorDarkergrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:buttonTint="@color/colorDarkgrey"/>
+
+
+            <!--<androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvVolume"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbAllType"
+                    android:text="All"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textColor="@color/colorDarkergrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:buttonTint="@color/colorDarkgrey"/>
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cbEngaging"
+                    android:text="Engaging"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/ralewaymedium"
+                    android:textColor="@color/colorDarkergrey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:buttonTint="@color/colorDarkgrey"/>
+
+            </LinearLayout>
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cbNonEngaging"
+                android:text="Non-Engaging"
+                android:textSize="16sp"
+                android:fontFamily="@font/ralewaymedium"
+                android:textColor="@color/colorDarkergrey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:buttonTint="@color/colorDarkgrey"/>
+
+
+           <!-- <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rvType"
+                android:layout_marginTop="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>-->
+
+
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock Availability"/>
+
+
+
+          <LinearLayout
+              android:layout_marginTop="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <CheckBox
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/cbAll"
+                  android:text="All"
+                  android:textSize="16sp"
+                  android:fontFamily="@font/ralewaymedium"
+                  android:textColor="@color/colorDarkergrey"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:buttonTint="@color/colorDarkgrey"/>
+
+              <CheckBox
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/cbInStock"
+                  android:text="InStock"
+                  android:textSize="16sp"
+                  android:fontFamily="@font/ralewaymedium"
+                  android:textColor="@color/colorDarkergrey"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:buttonTint="@color/colorDarkgrey"/>
+
+          </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvUpdateFilter"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_bg"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="18sp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:text="Update"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+    </LinearLayout>
+

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ArumDental</string>
+    <string name="sign_up">Sign up</string>
+    <string name="a_z">A-Z</string>
+    <string name="brand">Brand</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="No_internet_Connection">No internet Connection</string>
+    <string name="my_order">My Order</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="if_you_got_any_questions_please_do_not_hestitate_to_send_us_a_message">If you got any questions \n Please do not hestitate to send us a message</string>
+    <string name="company">Company</string>
+</resources>

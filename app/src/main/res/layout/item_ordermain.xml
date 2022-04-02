@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/txtOrerNo"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Order No: "
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        app:layout_constraintTop_toTopOf="@id/txtOrerNo"
+        android:id="@+id/tvOrerNo"
+        android:layout_width="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/txtOrerNo"
+        app:layout_constraintStart_toEndOf="@id/txtOrerNo"
+
+        android:text="Order No"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtDate"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtOrerNo"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:text="Date: "
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvDateOrder"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toStartOf="@id/txtOrderStatus"
+        android:layout_marginRight="10dp"
+
+
+        app:layout_constraintStart_toEndOf="@id/txtDate"
+        app:layout_constraintTop_toTopOf="@id/txtDate"
+        app:layout_constraintBottom_toBottomOf="@id/txtDate"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtShippingPrice"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtDate"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:text="Shipping total: "
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvShippingPrice"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toStartOf="@id/txtOrderStatus"
+        android:layout_marginRight="10dp"
+
+
+        app:layout_constraintStart_toEndOf="@id/txtShippingPrice"
+        app:layout_constraintTop_toTopOf="@id/txtShippingPrice"
+        app:layout_constraintBottom_toBottomOf="@id/txtShippingPrice"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtOrderPrice"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtShippingPrice"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:text="Total: "
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:id="@+id/tvOrderPrice"
+        android:layout_width="0dp"
+        app:layout_constraintEnd_toStartOf="@id/txtOrderStatus"
+        android:layout_marginRight="10dp"
+
+
+        app:layout_constraintStart_toEndOf="@id/txtOrderPrice"
+        app:layout_constraintTop_toTopOf="@id/txtOrderPrice"
+        app:layout_constraintBottom_toBottomOf="@id/txtOrderPrice"
+        android:textSize="14sp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/txtOrderStatus"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtOrerNo"
+        app:layout_constraintEnd_toStartOf="@+id/tvStatus"
+
+        android:text="Status: "
+        android:textSize="18sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/tvStatus"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtOrerNo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Processing "
+        android:gravity="bottom"
+        android:inputType="textCapSentences"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/ralewaybold"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/tvOrderPrice"
+        android:id="@+id/rvOrderInner"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

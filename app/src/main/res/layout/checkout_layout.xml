@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:id="@+id/CheckOutView"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivBackCheckOut"
+
+                android:layout_width="wrap_content"
+                android:src="@drawable/back"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Checkout"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ralewaymedium"
+                android:textSize="20sp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|end"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivSearch"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/search"/>
+            <ImageView
+                android:id="@+id/ivCart"
+                android:layout_width="25dp"
+                android:visibility="gone"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/basket"/>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ivMenu"
+                android:padding="5dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/menu"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rvCart"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginHorizontal="10dp"/>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/llPrices"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Total"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorDarkgrey"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9.00"
+                        android:id="@+id/tvSubtotal"
+                        android:layout_alignParentRight="true"
+                        android:gravity="end"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorDarkgrey"
+                        />
+
+
+
+                </RelativeLayout>
+              <!--  <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coupon Discount"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorDarkgrey"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="€0.00"
+                        android:id="@+id/tvCoupon"
+                        android:layout_alignParentRight="true"
+                        android:gravity="end"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorYellow"
+                        />
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VAT(5%)"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorDarkgrey"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="€0.00"
+                        android:id="@+id/tvVat"
+                        android:layout_alignParentRight="true"
+                        android:gravity="end"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorDarkgrey"
+                        />
+
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery (Weight:15.00kg)"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorDarkgrey"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Free"
+                        android:id="@+id/tvDeliveryWeight"
+                        android:layout_alignParentRight="true"
+                        android:gravity="end"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorYellow"
+                        />
+
+
+
+                </RelativeLayout>-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Payable"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorDarkgrey"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9.00"
+                        android:id="@+id/tvTotal"
+                        android:layout_alignParentRight="true"
+                        android:gravity="end"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/ralewaymedium"
+                        android:textColor="@color/colorBlack"
+                        />
+
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvProceed"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_bg"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/ralewaybold"
+                android:textSize="18sp"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:text="Proceed to next"/>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="No Products Found"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:id="@+id/tvNoProductsCart"
+        android:visibility="gone"
+        android:fontFamily="@font/ralewaymediumitalic"
+        android:layout_gravity="center"/>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

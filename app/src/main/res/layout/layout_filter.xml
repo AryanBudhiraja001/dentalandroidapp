@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="52dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <LinearLayout
+            android:id="@+id/llSortBrands"
+            android:background="@color/colorBackground"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivSort"
+                android:src="@drawable/sort"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/a_z"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:fontFamily="@font/ralewaybold"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/brand"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="17sp"
+                android:fontFamily="@font/ralewayregular"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFilter"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/colorDarkBackground"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivFilter"
+                android:src="@drawable/filter_blk"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Filter"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:fontFamily="@font/ralewaybold"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorView"/>
+    
+
+
+    
+
+</LinearLayout>

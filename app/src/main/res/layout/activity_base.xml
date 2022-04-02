@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".authentication.BaseActivity">
+    <include layout="@layout/common_toolbar"
+        android:visibility="gone"/>
+    
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/topbgnew"
+      >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="45dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
+
+            android:src="@drawable/logo_clear"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/top"
+        android:id="@+id/middle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+  >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello!"
+            android:textSize="40dp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/ralewaymedium"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let's get started"
+            android:textColor="@color/colorDarkergrey"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/ralewaymediumitalic"/>
+        
+
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="10dp"
+            android:textSize="17sp"
+            android:fontFamily="@font/ralewaybold"
+
+            android:textColor="@color/colorWhite"
+            android:text="login"
+            android:paddingHorizontal="40dp"
+            android:background="@drawable/blue_round_bg"
+            />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/btSignUp"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:paddingVertical="10dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="20dp"
+            android:layout_gravity="center"
+
+
+            android:paddingHorizontal="40dp"
+            android:background="@drawable/black_stroke_bg"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="17sp"
+                android:text="@string/sign_up"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/ralewaybold"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+        
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/rocket"
+        android:layout_marginBottom="20dp"
+
+
+        android:layout_height="0dp"
+        android:layout_weight=".3"
+        android:layout_gravity="bottom"/>
+    
+   
+
+</LinearLayout>
